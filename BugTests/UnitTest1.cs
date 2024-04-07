@@ -6,18 +6,18 @@ public class UnitTest1
     [TestMethod]
     public void TestInitialStateIsOpen()
     {
-	    var bug = new Bug(Bug.State.Open);
-	    var state = bug.getState();
-	    Assert.AreEqual(Bug.State.Open, state);
+	var bug = new Bug(Bug.State.Open);
+	var state = bug.getState();
+	Assert.AreEqual(Bug.State.Open, state);
     }
 
     [TestMethod]
     public void TestAssignBug()
     {
         var bug = new Bug(Bug.State.Open);
-	    bug.Assign();
-	    var state = bug.getState();
-	    Assert.AreEqual(Bug.State.Assigned, state);
+	bug.Assign();
+	var state = bug.getState();
+	Assert.AreEqual(Bug.State.Assigned, state);
     }
 
     [TestMethod]
@@ -32,10 +32,10 @@ public class UnitTest1
     [TestMethod]
     public void TestAssignedAndDeferBug()
     {
-	    var bug = new Bug(Bug.State.Assigned);
-	    bug.Defer();
-	    var state = bug.getState();
-	    Assert.AreEqual(Bug.State.Defered, state);
+	var bug = new Bug(Bug.State.Assigned);
+	bug.Defer();
+	var state = bug.getState();
+	Assert.AreEqual(Bug.State.Defered, state);
     }
 
     [TestMethod]
@@ -59,11 +59,11 @@ public class UnitTest1
     [TestMethod]
     public void TestAssignAndDeferBug()
     {
-	    var bug = new Bug(Bug.State.Open);
-	    bug.Assign();
-	    bug.Defer();
-	    var state = bug.getState();
-	    Assert.AreEqual(Bug.State.Defered, state);
+	var bug = new Bug(Bug.State.Open);
+	bug.Assign();
+	bug.Defer();
+	var state = bug.getState();
+	Assert.AreEqual(Bug.State.Defered, state);
     }
    
     [TestMethod]
